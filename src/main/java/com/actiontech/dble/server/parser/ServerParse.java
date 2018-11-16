@@ -1179,7 +1179,7 @@ public final class ServerParse {
                                 (c2 == 'O' || c2 == 'o') &&
                                 (c3 == 'C' || c3 == 'c') &&
                                 (c4 == 'K' || c4 == 'k') &&
-                                (c5 == ' ' || c5 == '\t' || c5 == '\r' || c5 == '\n')) {
+                                ParseUtil.isEOF(stmt, offset)) {
                             return UNLOCK;
                         }
                     }
