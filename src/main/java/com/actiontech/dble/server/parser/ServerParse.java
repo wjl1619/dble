@@ -1174,12 +1174,11 @@ public final class ServerParse {
                         char c2 = stmt.charAt(++offset);
                         char c3 = stmt.charAt(++offset);
                         char c4 = stmt.charAt(++offset);
-                        char c5 = stmt.charAt(++offset);
                         if ((c1 == 'L' || c1 == 'l') &&
                                 (c2 == 'O' || c2 == 'o') &&
                                 (c3 == 'C' || c3 == 'c') &&
                                 (c4 == 'K' || c4 == 'k') &&
-                                ParseUtil.isEOF(stmt, offset)) {
+                                ParseUtil.isEOF(stmt, ++offset)) {
                             return UNLOCK;
                         }
                     }
